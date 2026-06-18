@@ -1,4 +1,11 @@
 import { useState } from "react";
+import odisseiaImg from "@/assets/Odisseia.png";
+import kitImg from "@/assets/Kit.png";
+import imagem1 from "@/assets/imagem1.jpg";
+import imagem2 from "@/assets/imagem2.jpg";
+import imagem3 from "@/assets/imagem3.jpg";
+import imagem4 from "@/assets/imagem4.jpg";
+import logoimg from "@/assets/logo-odisseia.png";
 
 const WHATSAPP_NUMBER =
   (import.meta.env.VITE_WHATSAPP_NUMBER as string) || "5519999999999"; // [DADO A CONFIRMAR]
@@ -113,8 +120,14 @@ function Hero() {
             <span className="w-2 h-2 rounded-full bg-pandora-gold" /> 2ª Edição · #SangueLaranja
           </span>
           <h1 className="mt-5 font-display font-black leading-[0.95] text-[clamp(2.5rem,8vw,5.5rem)]">
-            Garanta sua vaga na{" "}
-            <span className="text-pandora-gold">Odisseia Pandora</span>
+            <span className="relative top-[2px]">
+              Garanta sua vaga na{" "}
+            </span>
+            <img
+              src={logoimg}
+              alt="Odisseia Pandora"
+              className="inline-block h-[1.6em] ml-3 mt-4"
+            />
           </h1>
           <p className="mt-6 text-lg md:text-xl text-pandora-cream/90 max-w-xl leading-relaxed">
             Participe da 2ª Corrida Odisseia Pandora em Limeira/SP e viva uma
@@ -162,7 +175,15 @@ function Hero() {
           </div>
         </div>
 
-        <HeroIllustration />
+        <div className="relative flex justify-center lg:justify-end">
+  <div className="rounded-3xl bg-pandora-cream/10 border border-pandora-cream/20 p-6 backdrop-blur-sm">
+    <img
+      src={odisseiaImg}
+      alt="Odisseia Pandora"
+      className="w-full max-w-sm object-contain"
+    />
+  </div>
+</div>
       </div>
     </section>
   );
@@ -181,6 +202,7 @@ function GreekPattern() {
   );
 }
 
+/*
 function HeroIllustration() {
   return (
     <div className="relative aspect-[4/5] max-w-md mx-auto w-full">
@@ -206,7 +228,7 @@ function HeroIllustration() {
       </svg>
     </div>
   );
-}
+} */
 
 function SocialProof() {
   const items = [
@@ -357,12 +379,21 @@ function Kit() {
             Quero conhecer o kit
           </a>
         </div>
-        <KitIllustration />
+        <div className="relative flex justify-center lg:justify-end">
+  <div className="rounded-3xl bg-white border border-pandora-border p-6 shadow-lg">
+    <img
+      src={kitImg}
+      alt="Kit Odisseia Pandora"
+      className="w-full max-w-sm object-contain"
+    />
+  </div>
+</div>
       </div>
     </Section>
   );
 }
 
+/*
 function KitIllustration() {
   return (
     <div className="relative aspect-square max-w-md mx-auto w-full">
@@ -380,6 +411,7 @@ function KitIllustration() {
     </div>
   );
 }
+  */
 
 function HowItWorks() {
   const steps: Array<[string, string]> = [
@@ -406,20 +438,30 @@ function HowItWorks() {
 }
 
 function Gallery() {
-  const slots = ["participantes","kit","medalha","cartaz","banner digital","largada"];
+  const images = [
+  { src: imagem1, alt: "Participantes" },
+  { src: imagem2, alt: "Participantes" },
+  { src: imagem3, alt: "Participantes" },
+  { src: imagem4, alt: "Participantes" },
+];
   return (
     <Section bg="bg-pandora-cream" id="fotos">
       <SectionHeading eyebrow="Galeria" title="A energia da Odisseia já começou" />
       <p className="mt-4 max-w-2xl text-pandora-text/80">Pessoas reais, energia positiva e comunidade. Em breve, fotos da edição anterior e dos materiais oficiais da campanha.</p>
-      <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {slots.map((s, i) => (
-          <div key={s} className="aspect-[4/3] rounded-3xl border-2 border-dashed border-pandora-border bg-white flex flex-col items-center justify-center text-center p-6">
-            <div className="font-display font-black text-pandora-orange text-5xl">{String(i + 1).padStart(2, "0")}</div>
-            <p className="mt-2 text-sm font-bold text-pandora-wine">[IMAGEM REAL A INSERIR]</p>
-            <p className="text-xs text-pandora-muted mt-1 uppercase tracking-widest">{s}</p>
-          </div>
-        ))}
-      </div>
+      <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+  {images.map((img, i) => (
+    <div
+      key={i}
+      className="aspect-[4/5] rounded-3xl overflow-hidden border border-pandora-border bg-white"
+    >
+      <img
+        src={img.src}
+        alt={img.alt}
+        className="w-full h-full object-cover hover:scale-105 transition duration-500"
+      />
+    </div>
+  ))}
+</div>
     </Section>
   );
 }
@@ -634,11 +676,15 @@ function FAQ() {
 
 function Footer() {
   return (
-    <footer role="contentinfo" className="bg-pandora-dark text-pandora-cream/80">
+    <footer role="contentinfo" className="bg-[#c73a18] text-pandora-cream/80">
       <div className="mx-auto max-w-7xl px-4 py-12 grid md:grid-cols-3 gap-8">
         <div>
-          <div className="font-display font-black text-2xl text-pandora-cream">Odisseia Pandora</div>
-          <div className="text-xs uppercase tracking-widest text-pandora-gold mt-1">by Pandora Educacional</div>
+          <img
+            src={logoimg}
+            alt="Odisseia Pandora"
+            className="h-16 w-auto object-contain"
+          />
+          <div className="text-xs uppercase tracking-widest text-[#8a1628] mt-1">by Pandora Educacional</div>
           <p className="mt-4 text-sm leading-relaxed">2ª Corrida Odisseia Pandora — 23 de agosto, Limeira/SP. Uma jornada esportiva, familiar e comunitária #SangueLaranja.</p>
         </div>
         <div>
