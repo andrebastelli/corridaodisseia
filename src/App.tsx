@@ -1,4 +1,6 @@
 import { useState } from "react";
+import odisseiaImg from "@/assets/Odisseia.png";
+import kitImg from "@/assets/Kit.png";
 
 const WHATSAPP_NUMBER =
   (import.meta.env.VITE_WHATSAPP_NUMBER as string) || "5519999999999"; // [DADO A CONFIRMAR]
@@ -162,7 +164,15 @@ function Hero() {
           </div>
         </div>
 
-        <HeroIllustration />
+        <div className="relative flex justify-center lg:justify-end">
+  <div className="rounded-3xl bg-pandora-cream/10 border border-pandora-cream/20 p-6 backdrop-blur-sm">
+    <img
+      src={odisseiaImg}
+      alt="Odisseia Pandora"
+      className="w-full max-w-sm object-contain"
+    />
+  </div>
+</div>
       </div>
     </section>
   );
@@ -181,6 +191,7 @@ function GreekPattern() {
   );
 }
 
+/*
 function HeroIllustration() {
   return (
     <div className="relative aspect-[4/5] max-w-md mx-auto w-full">
@@ -206,7 +217,7 @@ function HeroIllustration() {
       </svg>
     </div>
   );
-}
+} */
 
 function SocialProof() {
   const items = [
@@ -357,12 +368,21 @@ function Kit() {
             Quero conhecer o kit
           </a>
         </div>
-        <KitIllustration />
+        <div className="relative flex justify-center lg:justify-end">
+  <div className="rounded-3xl bg-white border border-pandora-border p-6 shadow-lg">
+    <img
+      src={kitImg}
+      alt="Kit Odisseia Pandora"
+      className="w-full max-w-sm object-contain"
+    />
+  </div>
+</div>
       </div>
     </Section>
   );
 }
 
+/*
 function KitIllustration() {
   return (
     <div className="relative aspect-square max-w-md mx-auto w-full">
@@ -380,6 +400,7 @@ function KitIllustration() {
     </div>
   );
 }
+  */
 
 function HowItWorks() {
   const steps: Array<[string, string]> = [
