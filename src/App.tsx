@@ -676,7 +676,9 @@ function FAQ() {
 
 function Footer() {
   return (
-    <footer role="contentinfo" className="bg-[#c73a18] text-pandora-cream/80">
+    <footer role="contentinfo"
+      className="relative overflow-hidden bg-[#c73a18] text-pandora-cream/80">
+      <GreekPattern />
       <div className="mx-auto max-w-7xl px-4 py-12 grid md:grid-cols-3 gap-8">
         <div>
           <img
