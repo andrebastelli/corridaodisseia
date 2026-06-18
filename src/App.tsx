@@ -1,6 +1,10 @@
 import { useState } from "react";
 import odisseiaImg from "@/assets/Odisseia.png";
 import kitImg from "@/assets/Kit.png";
+import imagem1 from "@/assets/imagem1.jpg";
+import imagem2 from "@/assets/imagem2.jpg";
+import imagem3 from "@/assets/imagem3.jpg";
+import imagem4 from "@/assets/imagem4.jpg";
 
 const WHATSAPP_NUMBER =
   (import.meta.env.VITE_WHATSAPP_NUMBER as string) || "5519999999999"; // [DADO A CONFIRMAR]
@@ -427,20 +431,30 @@ function HowItWorks() {
 }
 
 function Gallery() {
-  const slots = ["participantes","kit","medalha","cartaz","banner digital","largada"];
+  const images = [
+  { src: imagem1, alt: "Participantes" },
+  { src: imagem2, alt: "Participantes" },
+  { src: imagem3, alt: "Participantes" },
+  { src: imagem4, alt: "Participantes" },
+];
   return (
     <Section bg="bg-pandora-cream" id="fotos">
       <SectionHeading eyebrow="Galeria" title="A energia da Odisseia já começou" />
       <p className="mt-4 max-w-2xl text-pandora-text/80">Pessoas reais, energia positiva e comunidade. Em breve, fotos da edição anterior e dos materiais oficiais da campanha.</p>
-      <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {slots.map((s, i) => (
-          <div key={s} className="aspect-[4/3] rounded-3xl border-2 border-dashed border-pandora-border bg-white flex flex-col items-center justify-center text-center p-6">
-            <div className="font-display font-black text-pandora-orange text-5xl">{String(i + 1).padStart(2, "0")}</div>
-            <p className="mt-2 text-sm font-bold text-pandora-wine">[IMAGEM REAL A INSERIR]</p>
-            <p className="text-xs text-pandora-muted mt-1 uppercase tracking-widest">{s}</p>
-          </div>
-        ))}
-      </div>
+      <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+  {images.map((img, i) => (
+    <div
+      key={i}
+      className="aspect-[4/5] rounded-3xl overflow-hidden border border-pandora-border bg-white"
+    >
+      <img
+        src={img.src}
+        alt={img.alt}
+        className="w-full h-full object-cover hover:scale-105 transition duration-500"
+      />
+    </div>
+  ))}
+</div>
     </Section>
   );
 }
