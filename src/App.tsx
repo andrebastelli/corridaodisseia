@@ -1,5 +1,5 @@
 import { useState } from "react";
-import odisseiaImg from "@/assets/odisseia.png";
+import odisseiaImg from "@/assets/Odisseia.png";
 import kitImg from "@/assets/Kit.png";
 import imagem1 from "@/assets/imagem1.jpg";
 import imagem2 from "@/assets/imagem2.jpg";
