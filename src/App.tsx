@@ -1,11 +1,12 @@
 import { useState } from "react";
-import odisseiaImg from "@/assets/Odisseia.png";
+import odisseiaImg from "@/assets/odisseia.png";
 import kitImg from "@/assets/Kit.png";
 import imagem1 from "@/assets/imagem1.jpg";
 import imagem2 from "@/assets/imagem2.jpg";
 import imagem3 from "@/assets/imagem3.jpg";
 import imagem4 from "@/assets/imagem4.jpg";
 import logoimg from "@/assets/logo-odisseia.png";
+import logoimg1 from "@/assets/logo-odisseia1.png";
 
 const WHATSAPP_NUMBER =
   (import.meta.env.VITE_WHATSAPP_NUMBER as string) || "5519999999999"; // [DADO A CONFIRMAR]
@@ -83,13 +84,12 @@ function Header() {
       className="sticky top-0 z-40 backdrop-blur-md bg-pandora-cream/85 border-b border-pandora-border"
     >
       <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-4">
-        <a href="#top" className="flex flex-col leading-tight">
-          <span className="font-display text-xl font-black text-pandora-wine">
-            Odisseia Pandora
-          </span>
-          <span className="text-[11px] font-semibold text-pandora-muted tracking-wider uppercase">
-            by Pandora Educacional
-          </span>
+        <a href="#top" className="flex items-center">
+          <img
+            src={logoimg1}
+            alt="Odisseia Pandora - 2ª Edição"
+            className="h-10 w-auto object-contain"
+          />
         </a>
         <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-pandora-text">
           <a href="#modalidades" className="hover:text-pandora-orange">Modalidades</a>
