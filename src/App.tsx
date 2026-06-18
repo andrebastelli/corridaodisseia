@@ -5,7 +5,8 @@ import imagem1 from "@/assets/imagem1.jpg";
 import imagem2 from "@/assets/imagem2.jpg";
 import imagem3 from "@/assets/imagem3.jpg";
 import imagem4 from "@/assets/imagem4.jpg";
-import logoimg from "@/assets/logo-odisseia.png";
+import logo from "@/assets/logo-odisseia.png";
+import header from "@/assets/logo-odisseia-1.png";
 
 const WHATSAPP_NUMBER =
   (import.meta.env.VITE_WHATSAPP_NUMBER as string) || "5519999999999"; // [DADO A CONFIRMAR]
@@ -83,13 +84,12 @@ function Header() {
       className="sticky top-0 z-40 backdrop-blur-md bg-pandora-cream/85 border-b border-pandora-border"
     >
       <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-4">
-        <a href="#top" className="flex flex-col leading-tight">
-          <span className="font-display text-xl font-black text-pandora-wine">
-            Odisseia Pandora
-          </span>
-          <span className="text-[11px] font-semibold text-pandora-muted tracking-wider uppercase">
-            by Pandora Educacional
-          </span>
+        <a href="#top" className="flex items-center">
+          <img
+            src={header}
+            alt="Odisseia Pandora"
+            className="h-20 w-auto object-contain"
+          />
         </a>
         <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-pandora-text">
           <a href="#modalidades" className="hover:text-pandora-orange">Modalidades</a>
@@ -124,7 +124,7 @@ function Hero() {
               Garanta sua vaga na{" "}
             </span>
             <img
-              src={logoimg}
+              src={logo}
               alt="Odisseia Pandora"
               className="inline-block h-[1.6em] ml-3 mt-4"
             />
@@ -676,11 +676,13 @@ function FAQ() {
 
 function Footer() {
   return (
-    <footer role="contentinfo" className="bg-[#c73a18] text-pandora-cream/80">
+    <footer role="contentinfo"
+      className="relative overflow-hidden bg-[#c73a18] text-pandora-cream/80">
+      <GreekPattern />
       <div className="mx-auto max-w-7xl px-4 py-12 grid md:grid-cols-3 gap-8">
         <div>
           <img
-            src={logoimg}
+            src={logo}
             alt="Odisseia Pandora"
             className="h-16 w-auto object-contain"
           />
