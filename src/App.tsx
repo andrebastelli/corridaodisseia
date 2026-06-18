@@ -5,6 +5,7 @@ import imagem1 from "@/assets/imagem1.jpg";
 import imagem2 from "@/assets/imagem2.jpg";
 import imagem3 from "@/assets/imagem3.jpg";
 import imagem4 from "@/assets/imagem4.jpg";
+import logoimg from "@/assets/logo-odisseia.png";
 
 const WHATSAPP_NUMBER =
   (import.meta.env.VITE_WHATSAPP_NUMBER as string) || "5519999999999"; // [DADO A CONFIRMAR]
@@ -119,8 +120,14 @@ function Hero() {
             <span className="w-2 h-2 rounded-full bg-pandora-gold" /> 2ª Edição · #SangueLaranja
           </span>
           <h1 className="mt-5 font-display font-black leading-[0.95] text-[clamp(2.5rem,8vw,5.5rem)]">
-            Garanta sua vaga na{" "}
-            <span className="text-pandora-gold">Odisseia Pandora</span>
+            <span className="relative top-[2px]">
+              Garanta sua vaga na{" "}
+            </span>
+            <img
+              src={logoimg}
+              alt="Odisseia Pandora"
+              className="inline-block h-[1.6em] ml-3 mt-4"
+            />
           </h1>
           <p className="mt-6 text-lg md:text-xl text-pandora-cream/90 max-w-xl leading-relaxed">
             Participe da 2ª Corrida Odisseia Pandora em Limeira/SP e viva uma
@@ -669,11 +676,15 @@ function FAQ() {
 
 function Footer() {
   return (
-    <footer role="contentinfo" className="bg-pandora-dark text-pandora-cream/80">
+    <footer role="contentinfo" className="bg-[#c73a18] text-pandora-cream/80">
       <div className="mx-auto max-w-7xl px-4 py-12 grid md:grid-cols-3 gap-8">
         <div>
-          <div className="font-display font-black text-2xl text-pandora-cream">Odisseia Pandora</div>
-          <div className="text-xs uppercase tracking-widest text-pandora-gold mt-1">by Pandora Educacional</div>
+          <img
+            src={logoimg}
+            alt="Odisseia Pandora"
+            className="h-16 w-auto object-contain"
+          />
+          <div className="text-xs uppercase tracking-widest text-[#8a1628] mt-1">by Pandora Educacional</div>
           <p className="mt-4 text-sm leading-relaxed">2ª Corrida Odisseia Pandora — 23 de agosto, Limeira/SP. Uma jornada esportiva, familiar e comunitária #SangueLaranja.</p>
         </div>
         <div>
