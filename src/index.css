@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-pandora-orange px-7 py-4 font-bold text-white shadow-lg shadow-pandora-orange/30 hover:bg-pandora-orange-deep hover:-translate-y-0.5 transition;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-pandora-wine px-7 py-4 font-bold text-pandora-wine hover:bg-pandora-wine hover:text-white transition;
+  }
+}
