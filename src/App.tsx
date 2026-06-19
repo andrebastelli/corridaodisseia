@@ -537,18 +537,45 @@ function Objections() {
   );
 }
 
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyxd0BUfECQKXCLVL-OogRviUQFxIoFk_9bgCUPkOcpzxEOuqXpeCC-qW05rXsyhlKP/exec";
+
 function LeadForm() {
   const navigate = useNavigate();
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-    // Redireciona para página de obrigado após 1 segundo
-    setTimeout(() => {
-      navigate('/obrigado');
-    }, 1000);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.currentTarget);
+
+  const data = {
+    nome: formData.get("nome"),
+    whatsapp: formData.get("whatsapp"),
+    email: formData.get("email"),
+    cidade: formData.get("cidade"),
+    modalidade: formData.get("modalidade"),
+    vinculo: formData.get("vinculo"),
+    qtd: formData.get("qtd"),
+    mensagem: formData.get("mensagem"),
   };
+
+  try {
+    await fetch(SCRIPT_URL, {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+
+    setSent(true);
+
+    setTimeout(() => {
+      navigate("/obrigado");
+    }, 1000);
+
+  } catch (error) {
+    console.error("Erro ao enviar:", error);
+    alert("Erro ao enviar formulário. Tente novamente.");
+  }
+};
 
   return (
     <Section bg="bg-white" id="inscricao">
