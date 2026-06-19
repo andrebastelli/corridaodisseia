@@ -88,7 +88,7 @@ export default function ThankYou() {
                   Tirar dúvidas no WhatsApp
                 </a>
                 <a
-                  href="#"
+                  href="https://www.ticketsports.com.br/e/CORRIDA%20UMA%20ODISS%C3%89IA%20PANDORA-87423"
                   className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-pandora-cream/60 text-pandora-cream px-8 py-4 font-bold hover:bg-pandora-cream/10 transition"
                   onClick={(e) => {
                     e.preventDefault();
