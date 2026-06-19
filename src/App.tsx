@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import odisseiaImg from "@/assets/Odisseia.png";
 import kitImg from "@/assets/Kit.png";
 import imagem1 from "@/assets/imagem1.jpg";
@@ -537,7 +538,18 @@ function Objections() {
 }
 
 function LeadForm() {
+  const navigate = useNavigate();
   const [sent, setSent] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSent(true);
+    // Redireciona para página de obrigado após 1 segundo
+    setTimeout(() => {
+      navigate('/obrigado');
+    }, 1000);
+  };
+
   return (
     <Section bg="bg-white" id="inscricao">
       <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -549,12 +561,12 @@ function LeadForm() {
           </a>
         </div>
 
-        <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="rounded-3xl bg-pandora-cream border border-pandora-border p-6 md:p-8 shadow-sm space-y-4">
+        <form onSubmit={handleSubmit} className="rounded-3xl bg-pandora-cream border border-pandora-border p-6 md:p-8 shadow-sm space-y-4">
           {sent ? (
             <div className="text-center py-10">
               <div className="mx-auto w-14 h-14 rounded-full bg-pandora-orange flex items-center justify-center text-white text-2xl font-black">✓</div>
               <h3 className="mt-4 font-display text-2xl font-extrabold text-pandora-wine">Recebemos seu interesse!</h3>
-              <p className="mt-3 text-pandora-text/90">Em breve nossa equipe entrará em contato para orientar sua inscrição, modalidade, kit e próximos passos.</p>
+              <p className="mt-3 text-pandora-text/90">Redirecionando para sua página de boas-vindas...</p>
             </div>
           ) : (
             <>
