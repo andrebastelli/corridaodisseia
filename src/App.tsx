@@ -537,86 +537,53 @@ function Objections() {
   );
 }
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyxd0BUfECQKXCLVL-OogRviUQFxIoFk_9bgCUPkOcpzxEOuqXpeCC-qW05rXsyhlKP/exec";
-
 function LeadForm() {
-  const navigate = useNavigate();
-  const [sent, setSent] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-
-  const formData = new FormData(e.currentTarget);
-
-  const data = {
-    nome: formData.get("nome"),
-    whatsapp: formData.get("whatsapp"),
-    email: formData.get("email"),
-    cidade: formData.get("cidade"),
-    modalidade: formData.get("modalidade"),
-    vinculo: formData.get("vinculo"),
-    qtd: formData.get("qtd"),
-    mensagem: formData.get("mensagem"), 
-  };
-
-  try {
-    await fetch(SCRIPT_URL, {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
-
-    setSent(true);
-
-    setTimeout(() => {
-      navigate("/obrigado");
-    }, 1000);
-
-  } catch (error) {
-    console.error("Erro ao enviar:", error);
-    alert("Erro ao enviar formulário. Tente novamente.");
-  }
-};
-
   return (
     <Section bg="bg-white" id="inscricao">
       <div className="grid lg:grid-cols-2 gap-12 items-start">
+        
         <div>
-          <SectionHeading eyebrow="Inscrição" title="Garanta sua vaga na Odisseia" />
-          <p className="mt-6 text-lg text-pandora-text/90 leading-relaxed">Preencha o formulário e nossa equipe entrará em contato para orientar sua inscrição, modalidade, kit e próximos passos.</p>
-          <a href={buildWhatsAppUrl(DEFAULT_WPP_MSG)} target="_blank" rel="noopener noreferrer" className="btn-secondary mt-7">
-            Prefere WhatsApp? Fale com a equipe
+          <SectionHeading 
+            eyebrow="Inscrição" 
+            title="Garanta sua vaga na Odisseia" 
+          />
+          
+          <p className="mt-6 text-lg text-pandora-text/90 leading-relaxed">
+            Clique no botão abaixo e finalize sua inscrição agora mesmo.
+          </p>
+
+          <a
+            href="https://SEU-LINK-DE-PAGAMENTO-AQUI"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary mt-8 inline-block"
+          >
+            Quero garantir minha vaga agora
+          </a>
+
+          <a
+            href={buildWhatsAppUrl(DEFAULT_WPP_MSG)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary mt-4 inline-block"
+          >
+            Tirar dúvidas no WhatsApp
           </a>
         </div>
 
-        <form onSubmit={handleSubmit} className="rounded-3xl bg-pandora-cream border border-pandora-border p-6 md:p-8 shadow-sm space-y-4">
-          {sent ? (
-            <div className="text-center py-10">
-              <div className="mx-auto w-14 h-14 rounded-full bg-pandora-orange flex items-center justify-center text-white text-2xl font-black">✓</div>
-              <h3 className="mt-4 font-display text-2xl font-extrabold text-pandora-wine">Recebemos seu interesse!</h3>
-              <p className="mt-3 text-pandora-text/90">Redirecionando para sua página de boas-vindas...</p>
-            </div>
-          ) : (
-            <>
-              <Field label="Nome" name="nome" required />
-              <div className="grid sm:grid-cols-2 gap-4">
-                <Field label="WhatsApp" name="whatsapp" required type="tel" />
-                <Field label="E-mail" name="email" required type="email" />
-              </div>
-              <Field label="Cidade" name="cidade" required />
-              <div className="grid sm:grid-cols-2 gap-4">
-                <SelectField label="Modalidade desejada" name="modalidade" options={["3 km caminhada", "5 km corrida", "Ainda tenho dúvida"]} />
-                <SelectField label="Vínculo com a Pandora" name="vinculo" options={["Aluno", "Família / responsável", "Colaborador", "Comunidade", "Outro"]} />
-              </div>
-              <Field label="Quantidade de participantes" name="qtd" type="number" />
-              <div>
-                <label className="block text-sm font-bold text-pandora-wine mb-1.5">Mensagem ou dúvida</label>
-                <textarea name="mensagem" rows={3} className="w-full rounded-xl border-2 border-pandora-border bg-white px-4 py-3 outline-none focus:border-pandora-orange transition" />
-              </div>
-              <button type="submit" className="btn-primary w-full mt-2">Quero garantir minha vaga</button>
-              <p className="text-xs text-pandora-muted text-center">Ao enviar, você concorda em receber contato sobre a Corrida Odisseia Pandora.</p>
-            </>
-          )}
-        </form>
+        {/* Pode colocar uma imagem, benefícios ou nada */}
+        <div className="rounded-3xl bg-pandora-cream border border-pandora-border p-8">
+          <h3 className="text-xl font-bold text-pandora-wine">
+            O que você recebe:
+          </h3>
+
+          <ul className="mt-4 space-y-2 text-pandora-text">
+            <li>✔ Kit do participante</li>
+            <li>✔ Medalha</li>
+            <li>✔ Experiência Odisseia Pandora</li>
+          </ul>
+        </div>
+
       </div>
     </Section>
   );
