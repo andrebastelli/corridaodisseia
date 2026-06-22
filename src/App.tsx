@@ -706,6 +706,7 @@ function Footer() {
           <span>Realização: Pandora Educacional · Limeira/SP</span>
         </div>
       </div>
+      
     </footer>
   );
 }
