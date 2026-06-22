@@ -684,11 +684,37 @@ function Footer() {
         <div>
           <h4 className="font-bold text-pandora-cream">Navegação</h4>
           <ul className="mt-3 space-y-2 text-sm">
-            <li><a href="#modalidades" className="hover:text-pandora-gold">Modalidades</a></li>
-            <li><a href="#kit" className="hover:text-pandora-gold">Kit</a></li>
-            <li><a href="#como-funciona" className="hover:text-pandora-gold">Como funciona</a></li>
-            <li><a href="#fotos" className="hover:text-pandora-gold">Fotos</a></li>
-            <li><a href="#faq" className="hover:text-pandora-gold">FAQ</a></li>
+            <li>
+              <a
+                onClick={() => document.getElementById("modalidades")?.scrollIntoView({ behavior: "smooth" })}
+                className="cursor-pointer hover:text-pandora-gold"
+              >
+                Modalidades
+              </a>
+            </li>
+            <li>
+              <a onClick={() => document.getElementById("kit")?.scrollIntoView({ behavior: "smooth" })}>
+                Kit
+              </a>
+            </li>
+
+            <li>
+              <a onClick={() => document.getElementById("como-funciona")?.scrollIntoView({ behavior: "smooth" })}>
+                Como funciona
+              </a>
+            </li>
+
+            <li>
+              <a onClick={() => document.getElementById("fotos")?.scrollIntoView({ behavior: "smooth" })}>
+                Fotos
+              </a>
+            </li>
+
+            <li>
+              <a onClick={() => document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" })}>
+                FAQ
+              </a>
+            </li>
           </ul>
         </div>
         <div>
