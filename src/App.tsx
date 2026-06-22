@@ -351,7 +351,7 @@ function ModalityCard({ color, dist, title, subtitle, desc, bullets, cta, msg }:
             </li>
           ))}
         </ul>
-        <a href={buildWhatsAppUrl(msg)} target="_blank" rel="noopener noreferrer" className="btn-primary mt-7 w-full">
+        <a href="https://www.ticketsports.com.br/e/CORRIDA%20UMA%20ODISS%C3%89IA%20PANDORA-87423" target="_blank" rel="noopener noreferrer" className="btn-primary mt-7 w-full">
           {cta}
         </a>
       </div>
@@ -376,9 +376,6 @@ function Kit() {
             ))}
           </ul>
           <p className="mt-5 text-sm text-pandora-muted">Itens, regras de retirada, tamanhos, disponibilidade e composição final do kit: <strong>[DADO A CONFIRMAR]</strong>.</p>
-          <a href={buildWhatsAppUrl("Olá! Vim pela Landing Page da 2ª Corrida Odisseia Pandora e quero saber mais sobre o kit do participante.")} target="_blank" rel="noopener noreferrer" className="btn-primary mt-7">
-            Quero conhecer o kit
-          </a>
         </div>
         <div className="relative flex justify-center lg:justify-end">
   <div className="rounded-3xl bg-white border border-pandora-border p-6 shadow-lg">
@@ -613,7 +610,7 @@ function Offer() {
         <p className="mt-6 text-lg text-pandora-cream/90 max-w-2xl mx-auto">Garanta sua vaga na 2ª Corrida Odisseia Pandora. Escolha entre 3 km caminhada ou 5 km corrida e aproveite a condição especial enquanto estiver ativa.</p>
         <p className="mt-3 text-sm text-pandora-cream/75">Lote, valor, vagas e encerramento oficial: <strong>[DADO A CONFIRMAR]</strong>.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="#inscricao" className="btn-primary">Quero garantir minha vaga</a>
+          <a href="https://www.ticketsports.com.br/e/CORRIDA%20UMA%20ODISS%C3%89IA%20PANDORA-87423" target="_blank" rel="noopener noreferrer" className="btn-primary">Quero garantir minha vaga</a>
           <a href={buildWhatsAppUrl(DEFAULT_WPP_MSG)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-pandora-cream/60 px-7 py-4 font-bold text-pandora-cream hover:bg-pandora-cream/10 transition">
             Tirar dúvidas no WhatsApp
           </a>
