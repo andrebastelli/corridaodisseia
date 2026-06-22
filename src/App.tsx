@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import odisseiaImg from "@/assets/Odisseia.png";
 import kitImg from "@/assets/Kit.png";
 import imagem1 from "@/assets/imagem1.jpg";
@@ -98,7 +99,7 @@ function Header() {
           <a href="#fotos" className="hover:text-pandora-orange">Fotos</a>
           <a href="#faq" className="hover:text-pandora-orange">FAQ</a>
         </nav>
-        <a href="#inscricao" className="btn-primary text-sm hidden sm:inline-flex">
+        <a href="https://www.ticketsports.com.br/e/CORRIDA%20UMA%20ODISS%C3%89IA%20PANDORA-87423" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm hidden sm:inline-flex">
           Quero minha vaga
         </a>
       </div>
@@ -140,7 +141,7 @@ function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#inscricao" className="btn-primary">
+            <a href="https://www.ticketsports.com.br/e/CORRIDA%20UMA%20ODISS%C3%89IA%20PANDORA-87423" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm hidden sm:inline-flex">
               Quero garantir minha vaga →
             </a>
             <a
@@ -350,7 +351,7 @@ function ModalityCard({ color, dist, title, subtitle, desc, bullets, cta, msg }:
             </li>
           ))}
         </ul>
-        <a href={buildWhatsAppUrl(msg)} target="_blank" rel="noopener noreferrer" className="btn-primary mt-7 w-full">
+        <a href="https://www.ticketsports.com.br/e/CORRIDA%20UMA%20ODISS%C3%89IA%20PANDORA-87423" target="_blank" rel="noopener noreferrer" className="btn-primary mt-7 w-full">
           {cta}
         </a>
       </div>
@@ -375,9 +376,6 @@ function Kit() {
             ))}
           </ul>
           <p className="mt-5 text-sm text-pandora-muted">Itens, regras de retirada, tamanhos, disponibilidade e composição final do kit: <strong>[DADO A CONFIRMAR]</strong>.</p>
-          <a href={buildWhatsAppUrl("Olá! Vim pela Landing Page da 2ª Corrida Odisseia Pandora e quero saber mais sobre o kit do participante.")} target="_blank" rel="noopener noreferrer" className="btn-primary mt-7">
-            Quero conhecer o kit
-          </a>
         </div>
         <div className="relative flex justify-center lg:justify-end">
   <div className="rounded-3xl bg-white border border-pandora-border p-6 shadow-lg">
@@ -537,47 +535,41 @@ function Objections() {
 }
 
 function LeadForm() {
-  const [sent, setSent] = useState(false);
   return (
     <Section bg="bg-white" id="inscricao">
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+        
         <div>
-          <SectionHeading eyebrow="Inscrição" title="Garanta sua vaga na Odisseia" />
-          <p className="mt-6 text-lg text-pandora-text/90 leading-relaxed">Preencha o formulário e nossa equipe entrará em contato para orientar sua inscrição, modalidade, kit e próximos passos.</p>
-          <a href={buildWhatsAppUrl(DEFAULT_WPP_MSG)} target="_blank" rel="noopener noreferrer" className="btn-secondary mt-7">
-            Prefere WhatsApp? Fale com a equipe
+          <SectionHeading 
+            eyebrow="Inscrição" 
+            title="Garanta sua vaga na Odisseia" 
+          />
+          
+          <p className="mt-6 text-lg text-pandora-text/90 leading-relaxed">
+            Clique no botão abaixo e finalize sua inscrição agora mesmo.
+          </p>
+
+          <a
+            href="https://www.ticketsports.com.br/e/CORRIDA%20UMA%20ODISS%C3%89IA%20PANDORA-87423"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary mt-8 inline-block"
+          >
+            Quero garantir minha vaga agora
           </a>
+
         </div>
 
-        <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="rounded-3xl bg-pandora-cream border border-pandora-border p-6 md:p-8 shadow-sm space-y-4">
-          {sent ? (
-            <div className="text-center py-10">
-              <div className="mx-auto w-14 h-14 rounded-full bg-pandora-orange flex items-center justify-center text-white text-2xl font-black">✓</div>
-              <h3 className="mt-4 font-display text-2xl font-extrabold text-pandora-wine">Recebemos seu interesse!</h3>
-              <p className="mt-3 text-pandora-text/90">Em breve nossa equipe entrará em contato para orientar sua inscrição, modalidade, kit e próximos passos.</p>
-            </div>
-          ) : (
-            <>
-              <Field label="Nome" name="nome" required />
-              <div className="grid sm:grid-cols-2 gap-4">
-                <Field label="WhatsApp" name="whatsapp" required type="tel" />
-                <Field label="E-mail" name="email" required type="email" />
-              </div>
-              <Field label="Cidade" name="cidade" required />
-              <div className="grid sm:grid-cols-2 gap-4">
-                <SelectField label="Modalidade desejada" name="modalidade" options={["3 km caminhada", "5 km corrida", "Ainda tenho dúvida"]} />
-                <SelectField label="Vínculo com a Pandora" name="vinculo" options={["Aluno", "Família / responsável", "Colaborador", "Comunidade", "Outro"]} />
-              </div>
-              <Field label="Quantidade de participantes" name="qtd" type="number" />
-              <div>
-                <label className="block text-sm font-bold text-pandora-wine mb-1.5">Mensagem ou dúvida</label>
-                <textarea name="mensagem" rows={3} className="w-full rounded-xl border-2 border-pandora-border bg-white px-4 py-3 outline-none focus:border-pandora-orange transition" />
-              </div>
-              <button type="submit" className="btn-primary w-full mt-2">Quero garantir minha vaga</button>
-              <p className="text-xs text-pandora-muted text-center">Ao enviar, você concorda em receber contato sobre a Corrida Odisseia Pandora.</p>
-            </>
-          )}
-        </form>
+        <div className="rounded-3xl bg-pandora-cream border border-pandora-border p-6 md:p-8 shadow-sm">
+  
+  <div className="rounded-2xl overflow-hidden border border-pandora-border">
+    <img
+      src={odisseiaImg}
+      alt="Kit Odisseia Pandora"
+      className="w-full h-64 object-cover"
+    />
+  </div>
+</div>
       </div>
     </Section>
   );
@@ -618,7 +610,7 @@ function Offer() {
         <p className="mt-6 text-lg text-pandora-cream/90 max-w-2xl mx-auto">Garanta sua vaga na 2ª Corrida Odisseia Pandora. Escolha entre 3 km caminhada ou 5 km corrida e aproveite a condição especial enquanto estiver ativa.</p>
         <p className="mt-3 text-sm text-pandora-cream/75">Lote, valor, vagas e encerramento oficial: <strong>[DADO A CONFIRMAR]</strong>.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="#inscricao" className="btn-primary">Quero garantir minha vaga</a>
+          <a href="https://www.ticketsports.com.br/e/CORRIDA%20UMA%20ODISS%C3%89IA%20PANDORA-87423" target="_blank" rel="noopener noreferrer" className="btn-primary">Quero garantir minha vaga</a>
           <a href={buildWhatsAppUrl(DEFAULT_WPP_MSG)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-pandora-cream/60 px-7 py-4 font-bold text-pandora-cream hover:bg-pandora-cream/10 transition">
             Tirar dúvidas no WhatsApp
           </a>
@@ -678,7 +670,7 @@ function Footer() {
   return (
     <footer role="contentinfo"
       className="relative overflow-hidden bg-[#c73a18] text-pandora-cream/80">
-      <GreekPattern />
+      
       <div className="mx-auto max-w-7xl px-4 py-12 grid md:grid-cols-3 gap-8">
         <div>
           <img
@@ -714,6 +706,7 @@ function Footer() {
           <span>Realização: Pandora Educacional · Limeira/SP</span>
         </div>
       </div>
+      
     </footer>
   );
 }
