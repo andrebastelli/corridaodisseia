@@ -99,7 +99,7 @@ function Header() {
           <a href="#fotos" className="hover:text-pandora-orange">Fotos</a>
           <a href="#faq" className="hover:text-pandora-orange">FAQ</a>
         </nav>
-        <a href="#inscricao" className="btn-primary text-sm hidden sm:inline-flex">
+        <a href="https://www.ticketsports.com.br/e/CORRIDA%20UMA%20ODISS%C3%89IA%20PANDORA-87423" className="btn-primary text-sm hidden sm:inline-flex">
           Quero minha vaga
         </a>
       </div>
