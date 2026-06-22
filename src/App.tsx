@@ -540,7 +540,7 @@ function Objections() {
 function LeadForm() {
   return (
     <Section bg="bg-white" id="inscricao">
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
         
         <div>
           <SectionHeading 
@@ -553,7 +553,7 @@ function LeadForm() {
           </p>
 
           <a
-            href="https://SEU-LINK-DE-PAGAMENTO-AQUI"
+            href="https://www.ticketsports.com.br/e/CORRIDA%20UMA%20ODISS%C3%89IA%20PANDORA-87423"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary mt-8 inline-block"
@@ -561,29 +561,18 @@ function LeadForm() {
             Quero garantir minha vaga agora
           </a>
 
-          <a
-            href={buildWhatsAppUrl(DEFAULT_WPP_MSG)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary mt-4 inline-block"
-          >
-            Tirar dúvidas no WhatsApp
-          </a>
         </div>
 
-        {/* Pode colocar uma imagem, benefícios ou nada */}
-        <div className="rounded-3xl bg-pandora-cream border border-pandora-border p-8">
-          <h3 className="text-xl font-bold text-pandora-wine">
-            O que você recebe:
-          </h3>
-
-          <ul className="mt-4 space-y-2 text-pandora-text">
-            <li>✔ Kit do participante</li>
-            <li>✔ Medalha</li>
-            <li>✔ Experiência Odisseia Pandora</li>
-          </ul>
-        </div>
-
+        <div className="rounded-3xl bg-pandora-cream border border-pandora-border p-6 md:p-8 shadow-sm">
+  
+  <div className="rounded-2xl overflow-hidden border border-pandora-border">
+    <img
+      src={odisseiaImg}
+      alt="Kit Odisseia Pandora"
+      className="w-full h-64 object-cover"
+    />
+  </div>
+</div>
       </div>
     </Section>
   );
