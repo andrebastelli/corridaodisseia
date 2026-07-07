@@ -2,15 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import logo from '@/assets/logo-odisseia.png';
 import header from '@/assets/logo-odisseia-1.png';
 
-const WHATSAPP_NUMBER =
-  (import.meta.env.VITE_WHATSAPP_NUMBER as string) || "5519999999999";
-
-const buildWhatsAppUrl = (message: string) =>
-  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-
-const DEFAULT_WPP_MSG =
-  "Olá! Vim pela Landing Page da 2ª Corrida Odisseia Pandora e quero garantir minha vaga. Pode me ajudar com as informações de inscrição, modalidade e kit?";
-
 export default function ThankYou() {
   const navigate = useNavigate();
 
@@ -77,7 +68,7 @@ export default function ThankYou() {
               {/* CTA Buttons */}
               <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
                 <a
-                  href={buildWhatsAppUrl(DEFAULT_WPP_MSG)}
+                  href="{buildWhatsAppUrl(DEFAULT_WPP_MSG)}"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] text-white px-8 py-4 font-bold hover:opacity-90 transition"

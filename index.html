@@ -2,17 +2,71 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo-odisseia.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="2ª Corrida Odisseia Pandora — 23 de agosto em Limeira/SP. 3 km caminhada ou 5 km corrida. Garanta sua vaga." />
-    <meta property="og:title" content="2ª Corrida Odisseia Pandora — Limeira/SP" />
-    <meta property="og:description" content="Participe da Odisseia Pandora em 23 de agosto. 3 km caminhada ou 5 km corrida. #SangueLaranja" />
+    <title>2ª Corrida Odisseia Pandora em Limeira/SP | Inscrições Abertas</title>
+
+    <meta name="description" content="Participe da 2ª Corrida Odisseia Pandora em Limeira/SP no dia 23 de agosto. Escolha entre 3km caminhada ou 5km corrida. Garanta sua inscrição agora!" />
+
+    <meta name="keywords" content="corrida Limeira, corrida de rua SP, evento esportivo Limeira, corrida 5km, caminhada 3km, Odisseia Pandora" />
+
+    <link rel="canonical" href="https://odisseia.pandoraeducacional.com.br/" />
+
+    <!-- Open Graph (Facebook / WhatsApp) -->
+    <meta property="og:title" content="2ª Corrida Odisseia Pandora em Limeira/SP" />
+    <meta property="og:description" content="23 de agosto | 3km caminhada ou 5km corrida. Vagas limitadas. Inscreva-se!" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://odisseia.pandoraeducacional.com.br/" />
+    <meta property="og:image" content="https://odisseia.pandoraeducacional.com.br/og-image.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="2ª Corrida Odisseia Pandora em Limeira/SP" />
+    <meta name="twitter:description" content="Corra ou caminhe! 23 de agosto em Limeira. Inscrições abertas." />
+    <meta name="twitter:image" content="https://odisseia.pandoraeducacional.com.br/og-image.jpg" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat+Alternates:wght@700;800;900&display=swap" rel="stylesheet" />
-    <title>2ª Corrida Odisseia Pandora | Inscrição em Limeira/SP</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat+Alternates:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org (Evento) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SportsEvent",
+        "name": "2ª Corrida Odisseia Pandora",
+        "startDate": "2026-08-23",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Limeira/SP",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Limeira",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+          }
+        },
+        "image": [
+          "https://seudominio.com/og-image.jpg"
+        ],
+        "description": "Corrida de rua com percurso de 5km e caminhada de 3km em Limeira/SP.",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://seudominio.com/",
+          "availability": "https://schema.org/InStock",
+          "price": "0",
+          "priceCurrency": "BRL"
+        }
+      }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

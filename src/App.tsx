@@ -9,6 +9,8 @@ import imagem4 from "@/assets/imagem4.jpg";
 import logo from "@/assets/logo-odisseia.png";
 import header from "@/assets/logo-odisseia-1.png";
 
+const OFFICIAL_LINK = "https://www.ticketsports.com.br/e/CORRIDA%20UMA%20ODISS%C3%89IA%20PANDORA-87423";
+
 export default function App() {
   return (
     <div className="min-h-screen bg-pandora-cream text-pandora-text">
@@ -48,15 +50,17 @@ function SchemaJsonLd() {
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     eventStatus: "https://schema.org/EventScheduled",
     location: {
-      "@type": "Place",
-      name: "Limeira/SP",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Limeira",
-        addressRegion: "SP",
-        addressCountry: "BR",
-      },
-    },
+  "@type": "Place",
+  name: "Pandora Educacional - Unidade Limeira",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Rua Sargento Pierrotti, 322",
+    addressLocality: "Limeira",
+    addressRegion: "SP",
+    postalCode: "13480-000",
+    addressCountry: "BR",
+  },
+},
     organizer: { "@type": "Organization", name: "Pandora Educacional" },
   };
   return (
@@ -88,7 +92,7 @@ function Header() {
           <a href="#fotos" className="hover:text-pandora-orange">Fotos</a>
           <a href="#faq" className="hover:text-pandora-orange">FAQ</a>
         </nav>
-        <a href="https://www.ticketsports.com.br/e/CORRIDA%2520UMA%2520ODISS%25C3%2589IA%2520PANDORA-87423?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnQH_0XGDZXa6UmzZkhEREGPn5xhhfeX9vZpikDinOSrjQeOiGtlIWsBUwdIo_aem_AL2nEnq8P2jJO4yD97J-BQ" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm hidden sm:inline-flex">
+        <a href={OFFICIAL_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm hidden sm:inline-flex">
           Quero minha vaga
         </a>
       </div>
@@ -120,8 +124,7 @@ function Hero() {
             />
           </h1>
           <p className="mt-6 text-lg md:text-xl text-pandora-cream/90 max-w-xl leading-relaxed">
-            Participe da 2ª Corrida Odisseia Pandora em Limeira/SP e viva uma
-            experiência épica em família, com modalidades de{" "}
+            Participe da Corrida Uma Odisseia Pandora em Limeira/SP e viva uma experiência esportiva completa, com{" "}
             <strong>3 km caminhada</strong> e <strong>5 km corrida</strong>.
           </p>
           <p className="mt-3 text-base text-pandora-cream/80 max-w-xl">
@@ -130,8 +133,8 @@ function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="https://www.ticketsports.com.br/e/Uma+Odiss%C3%A9ia+pandora-73795?tk_TA_14=dTVVMElLd21sZUZxRkRoJTJmY3lGdEFFRjl5WnBUY3h2ZjBqZkQ0OFVjazBLYXRMbnl4M2FGVkElM2QlM2Q1&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnu1aB4PfXU1a9pQpPy4O2vpdukp3qMuIAuVZBKFZ2cqnTxH1rIre1dgaiH6E_aem_P0iPTbIAT6BzAY1Ks8M89A" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm hidden sm:inline-flex">
-              Quero garantir minha vaga →
+            <a href={OFFICIAL_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm hidden sm:inline-flex">
+              Garantir minha vaga agora →
             </a>
             <a
               href="#modalidades"
@@ -191,34 +194,6 @@ function GreekPattern() {
     </svg>
   );
 }
-
-/*
-function HeroIllustration() {
-  return (
-    <div className="relative aspect-[4/5] max-w-md mx-auto w-full">
-      <div className="absolute inset-0 rounded-[2.5rem] bg-pandora-cream/10 backdrop-blur-sm border border-pandora-cream/20" />
-      <svg viewBox="0 0 400 500" className="relative w-full h-full" aria-label="Ilustração da Corrida Odisseia Pandora">
-        <circle cx="200" cy="140" r="90" fill="#F6B756" opacity="0.85" />
-        {[60, 130, 200, 270, 340].map((x) => (
-          <g key={x}>
-            <rect x={x - 10} y="220" width="20" height="140" fill="#FFF1DE" opacity="0.85" />
-            <rect x={x - 16} y="215" width="32" height="10" fill="#FFF1DE" />
-            <rect x={x - 16} y="360" width="32" height="10" fill="#FFF1DE" />
-          </g>
-        ))}
-        <g transform="translate(140 360)">
-          <circle cx="60" cy="20" r="18" fill="#FFF1DE" />
-          <path d="M40 60 Q60 35 85 50 L100 80 L80 110 L100 130 M40 60 L20 90 M60 90 L70 130" stroke="#FFF1DE" strokeWidth="10" strokeLinecap="round" fill="none" />
-        </g>
-        <g transform="translate(310 380)">
-          <path d="M0 0 L20 0 L10 30 Z" fill="#F6B756" />
-          <circle cx="10" cy="50" r="22" fill="#F6B756" stroke="#FFF1DE" strokeWidth="3" />
-          <text x="10" y="56" textAnchor="middle" fontWeight="900" fontSize="18" fill="#8A1628">2</text>
-        </g>
-      </svg>
-    </div>
-  );
-} */
 
 function SocialProof() {
   const items = [
@@ -340,7 +315,7 @@ function ModalityCard({ color, dist, title, subtitle, desc, bullets, cta, msg }:
             </li>
           ))}
         </ul>
-        <a href="https://www.ticketsports.com.br/e/CORRIDA%20UMA%20ODISS%C3%89IA%20PANDORA-87423" target="_blank" rel="noopener noreferrer" className="btn-primary mt-7 w-full">
+        <a href={OFFICIAL_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary mt-7 w-full">
           {cta}
         </a>
       </div>
@@ -349,7 +324,17 @@ function ModalityCard({ color, dist, title, subtitle, desc, bullets, cta, msg }:
 }
 
 function Kit() {
-  const items = ["Camiseta laranja temática","Sacochila","Doleira / pochete","Número de peito","Medalha","Cordão / credencial"];
+  const items = [
+  "Camiseta oficial do evento",
+  "Sacochila",
+  "Número de peito",
+  "Medalha de participação",
+  "Toalha personalizada",
+  "Sachê de isotônico",
+  "Kit limpa óculos",
+  "Chaveiro",
+  "Kit educativo digital",
+];
   return (
     <Section bg="bg-pandora-beige" id="kit">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -378,26 +363,6 @@ function Kit() {
     </Section>
   );
 }
-
-/*
-function KitIllustration() {
-  return (
-    <div className="relative aspect-square max-w-md mx-auto w-full">
-      <svg viewBox="0 0 400 400" className="w-full h-full" aria-hidden="true">
-        <circle cx="200" cy="200" r="180" fill="#F04A23" opacity="0.15" />
-        <path d="M120 130 L170 110 L200 130 L230 110 L280 130 L300 180 L260 190 L260 310 L140 310 L140 190 L100 180 Z" fill="#F04A23" stroke="#8A1628" strokeWidth="4" />
-        <text x="200" y="230" textAnchor="middle" fontFamily="Montserrat Alternates" fontWeight="900" fontSize="28" fill="#FFF1DE">ODISSEIA</text>
-        <text x="200" y="260" textAnchor="middle" fontFamily="Montserrat Alternates" fontWeight="800" fontSize="18" fill="#F6B756">PANDORA</text>
-        <g transform="translate(290 280)">
-          <path d="M0 0 L30 0 L15 40 Z" fill="#8A1628" />
-          <circle cx="15" cy="60" r="32" fill="#F6B756" stroke="#FFF1DE" strokeWidth="4" />
-          <text x="15" y="68" textAnchor="middle" fontWeight="900" fontSize="22" fill="#8A1628">2ª</text>
-        </g>
-      </svg>
-    </div>
-  );
-}
-  */
 
 function HowItWorks() {
   const steps: Array<[string, string]> = [
@@ -548,7 +513,7 @@ function Objections() {
   const items: Array<[string, string]> = [
     ["“Eu não sou corredor. Será que é para mim?”","Sim. Você não precisa ser atleta profissional. A modalidade 3 km caminhada foi pensada para quem quer viver a experiência com leveza, no seu ritmo e, se quiser, em família."],
     ["“Não sei qual modalidade escolher.”","Se você quer uma experiência tranquila, escolha 3 km caminhada. Se deseja se desafiar mais, escolha 5 km corrida. Em caso de dúvida, fale com a equipe pelo WhatsApp."],
-    ["“Quero saber o que está incluso no kit.”","Sacola, medalha exclusiva, camiseta, número de peito, sachê de isotônico, toalha personalizada laranja, kit limpa óculos, chaveiro e kit educativo (ebook esporte e aprendizado, playlist motivacional direto da plataforma pandora, atividade lúdico-esportiva antes da prova)"],
+    ["“Quero saber o que está incluso no kit.”","Camiseta oficial, sacochila, número de peito, medalha de participação, toalha personalizada, sachê de isotônico, kit limpa óculos, chaveiro e kit educativo digital."],
     ["“Vou ver depois.”","A pré-venda tem condição especial por tempo limitado. Garantindo sua vaga agora, você evita deixar para a última hora."],
     ["“Posso participar com minha família?”","A proposta é comunitária e familiar. Regras de idade, inscrição e responsabilidade: [DADO A CONFIRMAR]."],
   ];
@@ -583,12 +548,12 @@ function LeadForm() {
           </p>
 
           <a
-            href="https://www.ticketsports.com.br/e/Uma+Odiss%C3%A9ia+pandora-73795?tk_TA_14=dTVVMElLd21sZUZxRkRoJTJmY3lGdEFFRjl5WnBUY3h2ZjBqZkQ0OFVjazBLYXRMbnl4M2FGVkElM2QlM2Q1&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnu1aB4PfXU1a9pQpPy4O2vpdukp3qMuIAuVZBKFZ2cqnTxH1rIre1dgaiH6E_aem_P0iPTbIAT6BzAY1Ks8M89A"
+            href="href={OFFICIAL_LINK}"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary mt-8 inline-block"
           >
-            Quero garantir minha vaga agora
+            Garantir minha vaga agora
           </a>
 
         </div>
@@ -642,7 +607,7 @@ function Offer() {
         </h2>
         <p className="mt-6 text-lg text-pandora-cream/90 max-w-2xl mx-auto">Garanta sua vaga na 2ª Corrida Odisseia Pandora. Escolha entre 3 km caminhada ou 5 km corrida e aproveite a condição especial enquanto estiver ativa.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="https://www.ticketsports.com.br/e/Uma+Odiss%C3%A9ia+pandora-73795?tk_TA_14=dTVVMElLd21sZUZxRkRoJTJmY3lGdEFFRjl5WnBUY3h2ZjBqZkQ0OFVjazBLYXRMbnl4M2FGVkElM2QlM2Q1&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnu1aB4PfXU1a9pQpPy4O2vpdukp3qMuIAuVZBKFZ2cqnTxH1rIre1dgaiH6E_aem_P0iPTbIAT6BzAY1Ks8M89A" target="_blank" rel="noopener noreferrer" className="btn-primary">Quero garantir minha vaga</a>
+          <a href={OFFICIAL_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary">Garantir minha vaga agora</a>
           
         </div>
       </div>
@@ -652,15 +617,15 @@ function Offer() {
 
 const FAQS: Array<[string, string]> = [
   ["Quando será a Corrida Odisseia Pandora?", "A 2ª edição será dia 23 de agosto, em Limeira/SP."],
-  ["Onde será a largada ou concentração?", "O evento será realizado em Limeira/SP. Endereço exato: Rua Sargento Pierroti, 322."],
+  ["Onde será a largada ou concentração?", "O evento será realizado em Limeira/SP. Rua Sargento Pierrotti, 322 – Limeira/SP."],
   ["Quais são as modalidades disponíveis?", "3 km caminhada e 5 km corrida."],
   ["Preciso correr ou posso caminhar?", "Você pode caminhar. A modalidade 3 km caminhada foi pensada para quem deseja participar com leveza, inclusive em família."],
-  ["O que está incluso no kit?", "Sacola, medalha exclusiva, camiseta, número de peito, sachê de isotônico, toalha personalizada laranja, kit limpa óculos, chaveiro e kit educativo (ebook esporte e aprendizado, playlist motivacional direto da plataforma pandora, atividade lúdico-esportiva antes da prova)"],
+  ["O que está incluso no kit?", "Camiseta oficial, sacochila, número de peito, medalha de participação, toalha personalizada, sachê de isotônico, kit limpa óculos, chaveiro e kit educativo digital."],
   ["Quem pode participar da condição #SangueLaranja?", "Benefício exclusivo para quem faz parte da comunidade #SangueLaranja."],
-  ["Crianças e famílias podem participar?", "A comunicação é voltada para famílias, alunos e comunidade.Corrida: 5 km (a partir de 14 anos), Caminhada: 3 km (a partir de 10 anos), Tempo máximo de prova: 2h"],
-  ["Como faço a inscrição?", "Clique em “Quero garantir minha vaga” para o Link oficial."],
+  ["Crianças e famílias podem participar?", "A comunicação é voltada para famílias, alunos e comunidade. Corrida: 5 km (a partir de 14 anos), Caminhada: 3 km (a partir de 10 anos), Tempo máximo de prova: 2h"],
+  ["Como faço a inscrição?", "Clique em “Garantir minha vaga agora” para o Link oficial."],
   ["Até quando vai a pré-venda?", "Pré-venda por tempo limitado. Data final, lote vigente e regras: de 13/06 a 16/08."],
-  ["Como retiro o kit?", "A retirada dos kits será realizada no colégio .pandora Educacional unidade Limeira, localizado na Rua Sargento Pierrotti, 348 – Centro – Limeira."],
+  ["Como retiro o kit?", "A retirada dos kits será realizada no Colégio Pandora Educacional – Unidade Limeira, localizado na Rua Sargento Pierrotti, 348 – Centro – Limeira."],
 ];
 
 function FAQ() {
@@ -742,7 +707,7 @@ function Footer() {
 function MobileCTA() {
   return (
     <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white border-t border-pandora-border p-3 shadow-2xl">
-      <a href="https://www.ticketsports.com.br/e/Uma+Odiss%C3%A9ia+pandora-73795?tk_TA_14=dTVVMElLd21sZUZxRkRoJTJmY3lGdEFFRjl5WnBUY3h2ZjBqZkQ0OFVjazBLYXRMbnl4M2FGVkElM2QlM2Q1&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnu1aB4PfXU1a9pQpPy4O2vpdukp3qMuIAuVZBKFZ2cqnTxH1rIre1dgaiH6E_aem_P0iPTbIAT6BzAY1Ks8M89A" className="btn-primary w-full">Quero garantir minha vaga</a>
+      <a href={OFFICIAL_LINK} className="btn-primary w-full">Garantir minha vaga agora</a>
     </div>
   );
 }
