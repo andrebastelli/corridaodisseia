@@ -621,16 +621,16 @@ function Offer() {
 }
 
 const FAQS: Array<[string, string]> = [
-  ["Quando será a Corrida Odisseia Pandora?", "A 2ª edição está prevista para 23 de agosto, em Limeira/SP. Horário oficial da largada: [DADO A CONFIRMAR]."],
-  ["Onde será a largada ou concentração?", "O evento será realizado em Limeira/SP. Endereço exato: [DADO A CONFIRMAR]."],
+  ["Quando será a Corrida Odisseia Pandora?", "A 2ª edição será dia 23 de agosto, em Limeira/SP."],
+  ["Onde será a largada ou concentração?", "O evento será realizado em Limeira/SP. Endereço exato: Rua Sargento Pierroti, 322."],
   ["Quais são as modalidades disponíveis?", "3 km caminhada e 5 km corrida."],
   ["Preciso correr ou posso caminhar?", "Você pode caminhar. A modalidade 3 km caminhada foi pensada para quem deseja participar com leveza, inclusive em família."],
-  ["O que está incluso no kit?", "Camiseta temática, sacochila, doleira/pochete, número de peito, medalha e cordão/credencial. Composição final: [DADO A CONFIRMAR]."],
-  ["Quem pode participar da condição #SangueLaranja?", "Benefício exclusivo para quem faz parte da comunidade #SangueLaranja. Regras oficiais: [DADO A CONFIRMAR]."],
-  ["Crianças e famílias podem participar?", "A comunicação é voltada para famílias, alunos e comunidade. Regras de idade e autorização: [DADO A CONFIRMAR]."],
-  ["Como faço a inscrição?", "Clique em “Quero garantir minha vaga” para falar com a equipe pelo WhatsApp ou acessar o formulário oficial. Link oficial: [DADO A CONFIRMAR]."],
-  ["Até quando vai a pré-venda?", "Pré-venda por tempo limitado. Data final, lote vigente e regras: [DADO A CONFIRMAR]."],
-  ["Como retiro o kit?", "Local, data, horário e documentos para retirada: [DADO A CONFIRMAR]."],
+  ["O que está incluso no kit?", "Camiseta temática, sacochila personalizada, Pochete (porta celular), número de peito, medalha e cordão/credencial."],
+  ["Quem pode participar da condição #SangueLaranja?", "Benefício exclusivo para quem faz parte da comunidade #SangueLaranja."],
+  ["Crianças e famílias podem participar?", "A comunicação é voltada para famílias, alunos e comunidade."],
+  ["Como faço a inscrição?", "Clique em “Quero garantir minha vaga” para o Link oficial."],
+  ["Até quando vai a pré-venda?", "Pré-venda por tempo limitado. Data final, lote vigente e regras: de 13/06 a 16/08."],
+  ["Como retiro o kit?", "Os kits serão entregues no dia do evento."],
 ];
 
 function FAQ() {
