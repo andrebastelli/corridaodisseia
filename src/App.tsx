@@ -454,21 +454,66 @@ function Gallery() {
 }
 
 function Testimonials() {
+  const testimonials = [
+    {
+      nome: "Bruno",
+      tipo: "Pai de Aluno",
+      texto:
+        "Entrei sem muita expectativa e hoje posso dizer que foi uma das melhores decisões que já tomei. O ambiente, a energia e a organização fazem você evoluir muito mais rápido. Me senti parte de algo maior.",
+    },
+    {
+      nome: "Larissa",
+      tipo: "Família",
+      texto:
+        "É incrível ver a transformação não só no desempenho, mas na postura e disciplina. Meu filho ganhou mais foco, responsabilidade e vontade de participar. Foi uma experiência muito especial pra gente.",
+    },
+    {
+      nome: "Mateus",
+      tipo: "Comunidade",
+      texto:
+        "Aqui não é só sobre correr, é sobre conexão. Você sente que faz parte de algo de verdade. Todo mundo se apoia e cresce junto. A energia da Odisseia é diferente de qualquer outro evento.",
+    },
+  ];
+
   return (
     <Section bg="bg-white">
-      <SectionHeading eyebrow="Comunidade #SangueLaranja" title="O que dizem os participantes" />
+      <SectionHeading
+        eyebrow="Comunidade #SangueLaranja"
+        title="O que dizem os participantes"
+      />
+
       <div className="mt-10 grid md:grid-cols-3 gap-6">
-        {[1, 2, 3].map((n) => (
-          <article key={n} className="rounded-3xl border border-pandora-border bg-pandora-cream p-7">
+        {testimonials.map((t, i) => (
+          <article
+            key={i}
+            className="rounded-3xl border border-pandora-border bg-pandora-cream p-7"
+          >
             <div className="flex items-center gap-4">
-              <div aria-hidden="true" className="w-14 h-14 rounded-full bg-gradient-to-br from-pandora-orange to-pandora-wine flex items-center justify-center text-pandora-cream font-display font-black text-xl">P{n}</div>
+              <div
+                aria-hidden="true"
+                className="w-14 h-14 rounded-full bg-gradient-to-br from-pandora-orange to-pandora-wine flex items-center justify-center text-pandora-cream font-display font-black text-xl"
+              >
+                {t.nome.charAt(0)}
+              </div>
+
               <div>
-                <div className="font-bold text-pandora-wine">[NOME DO PARTICIPANTE]</div>
-                <div className="text-xs text-pandora-muted uppercase tracking-wider">[ALUNO / FAMÍLIA / COMUNIDADE]</div>
+                <div className="font-bold text-pandora-wine">{t.nome}</div>
+                <div className="text-xs text-pandora-muted uppercase tracking-wider">
+                  {t.tipo}
+                </div>
               </div>
             </div>
-            <p className="mt-5 text-pandora-text/90 leading-relaxed italic">“[DEPOIMENTO REAL A INSERIR]”</p>
-            <div className="mt-4 text-pandora-gold text-lg" aria-label="5 estrelas">★★★★★</div>
+
+            <p className="mt-5 text-pandora-text/90 leading-relaxed italic">
+              “{t.texto}”
+            </p>
+
+            <div
+              className="mt-4 text-pandora-gold text-lg"
+              aria-label="5 estrelas"
+            >
+              ★★★★★
+            </div>
           </article>
         ))}
       </div>
