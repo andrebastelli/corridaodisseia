@@ -92,7 +92,7 @@ function Header() {
           <a href="#fotos" className="hover:text-pandora-orange">Fotos</a>
           <a href="#faq" className="hover:text-pandora-orange">FAQ</a>
         </nav>
-        <a href="https://www.ticketsports.com.br/e/CORRIDA%2520UMA%2520ODISS%25C3%2589IA%2520PANDORA-87423?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnQH_0XGDZXa6UmzZkhEREGPn5xhhfeX9vZpikDinOSrjQeOiGtlIWsBUwdIo_aem_AL2nEnq8P2jJO4yD97J-BQ" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm hidden sm:inline-flex">
+        <a href={OFFICIAL_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm hidden sm:inline-flex">
           Quero minha vaga
         </a>
       </div>
@@ -133,7 +133,7 @@ function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="href={OFFICIAL_LINK}" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm hidden sm:inline-flex">
+            <a href={OFFICIAL_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm hidden sm:inline-flex">
               Garantir minha vaga agora →
             </a>
             <a
@@ -315,7 +315,7 @@ function ModalityCard({ color, dist, title, subtitle, desc, bullets, cta, msg }:
             </li>
           ))}
         </ul>
-        <a href="https://www.ticketsports.com.br/e/CORRIDA%20UMA%20ODISS%C3%89IA%20PANDORA-87423" target="_blank" rel="noopener noreferrer" className="btn-primary mt-7 w-full">
+        <a href={OFFICIAL_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary mt-7 w-full">
           {cta}
         </a>
       </div>
@@ -607,7 +607,7 @@ function Offer() {
         </h2>
         <p className="mt-6 text-lg text-pandora-cream/90 max-w-2xl mx-auto">Garanta sua vaga na 2ª Corrida Odisseia Pandora. Escolha entre 3 km caminhada ou 5 km corrida e aproveite a condição especial enquanto estiver ativa.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="href={OFFICIAL_LINK}" target="_blank" rel="noopener noreferrer" className="btn-primary">Garantir minha vaga agora</a>
+          <a href={OFFICIAL_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary">Garantir minha vaga agora</a>
           
         </div>
       </div>
@@ -707,7 +707,7 @@ function Footer() {
 function MobileCTA() {
   return (
     <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white border-t border-pandora-border p-3 shadow-2xl">
-      <a href="href={OFFICIAL_LINK}" className="btn-primary w-full">Garantir minha vaga agora</a>
+      <a href={OFFICIAL_LINK} className="btn-primary w-full">Garantir minha vaga agora</a>
     </div>
   );
 }
