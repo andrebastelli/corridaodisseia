@@ -71,7 +71,6 @@ function SchemaJsonLd() {
 function Header() {
   return (
     <header
-      role="navigation"
       className="sticky top-0 z-40 backdrop-blur-md bg-pandora-cream/85 border-b border-pandora-border"
     >
       <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-4">
