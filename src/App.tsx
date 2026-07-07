@@ -133,7 +133,7 @@ function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="https://www.ticketsports.com.br/e/Uma+Odiss%C3%A9ia+pandora-73795?tk_TA_14=dTVVMElLd21sZUZxRkRoJTJmY3lGdEFFRjl5WnBUY3h2ZjBqZkQ0OFVjazBLYXRMbnl4M2FGVkElM2QlM2Q1&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnu1aB4PfXU1a9pQpPy4O2vpdukp3qMuIAuVZBKFZ2cqnTxH1rIre1dgaiH6E_aem_P0iPTbIAT6BzAY1Ks8M89A" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm hidden sm:inline-flex">
+            <a href="href={OFFICIAL_LINK}" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm hidden sm:inline-flex">
               Garantir minha vaga agora →
             </a>
             <a
@@ -548,7 +548,7 @@ function LeadForm() {
           </p>
 
           <a
-            href="https://www.ticketsports.com.br/e/Uma+Odiss%C3%A9ia+pandora-73795?tk_TA_14=dTVVMElLd21sZUZxRkRoJTJmY3lGdEFFRjl5WnBUY3h2ZjBqZkQ0OFVjazBLYXRMbnl4M2FGVkElM2QlM2Q1&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnu1aB4PfXU1a9pQpPy4O2vpdukp3qMuIAuVZBKFZ2cqnTxH1rIre1dgaiH6E_aem_P0iPTbIAT6BzAY1Ks8M89A"
+            href="href={OFFICIAL_LINK}"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary mt-8 inline-block"
@@ -607,7 +607,7 @@ function Offer() {
         </h2>
         <p className="mt-6 text-lg text-pandora-cream/90 max-w-2xl mx-auto">Garanta sua vaga na 2ª Corrida Odisseia Pandora. Escolha entre 3 km caminhada ou 5 km corrida e aproveite a condição especial enquanto estiver ativa.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="https://www.ticketsports.com.br/e/Uma+Odiss%C3%A9ia+pandora-73795?tk_TA_14=dTVVMElLd21sZUZxRkRoJTJmY3lGdEFFRjl5WnBUY3h2ZjBqZkQ0OFVjazBLYXRMbnl4M2FGVkElM2QlM2Q1&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnu1aB4PfXU1a9pQpPy4O2vpdukp3qMuIAuVZBKFZ2cqnTxH1rIre1dgaiH6E_aem_P0iPTbIAT6BzAY1Ks8M89A" target="_blank" rel="noopener noreferrer" className="btn-primary">Garantir minha vaga agora</a>
+          <a href="href={OFFICIAL_LINK}" target="_blank" rel="noopener noreferrer" className="btn-primary">Garantir minha vaga agora</a>
           
         </div>
       </div>
@@ -707,7 +707,7 @@ function Footer() {
 function MobileCTA() {
   return (
     <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white border-t border-pandora-border p-3 shadow-2xl">
-      <a href="https://www.ticketsports.com.br/e/Uma+Odiss%C3%A9ia+pandora-73795?tk_TA_14=dTVVMElLd21sZUZxRkRoJTJmY3lGdEFFRjl5WnBUY3h2ZjBqZkQ0OFVjazBLYXRMbnl4M2FGVkElM2QlM2Q1&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnu1aB4PfXU1a9pQpPy4O2vpdukp3qMuIAuVZBKFZ2cqnTxH1rIre1dgaiH6E_aem_P0iPTbIAT6BzAY1Ks8M89A" className="btn-primary w-full">Garantir minha vaga agora</a>
+      <a href="href={OFFICIAL_LINK}" className="btn-primary w-full">Garantir minha vaga agora</a>
     </div>
   );
 }
